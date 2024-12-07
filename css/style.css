@@ -171,7 +171,6 @@ body {
     width: 600px;
     height: 600px;
     border-radius: 300;
-    border: 1px solid #e6e8ec;
     background: none;
 }
 
@@ -302,4 +301,99 @@ body {
 
 .nav__link:hover {
     color: #23262f;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 648px;
+    }
+
+    .header__verticall-line {
+        display: none;
+    }
+
+    .header__nav {
+        display: none;
+    }
+
+    .header__right {
+        display: none;
+    }
+
+    .btn__fill {
+        display: none;
+    }
+
+    .btn__ghost {
+        display: none;
+    }
+
+    .header__icon-menu {
+        width: 44px;
+        height: 44px;
+        background-image: url(../img/Menu.png);
+    }
+
+    .hero__title {
+        font-size: 64px;
+        line-height: 64px;  
+    }
+
+    .hero__subtitle {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .hero__container {
+        flex-direction: column;
+        gap: 48px;
+    }
+
+    .hero__content {
+        width: 100%;
+    }
+
+    .hero__player {
+        width: 350px;
+        height: 350px;
+    }
+
+    .player__preview {
+        width: 588px;
+        height: 290px;
+        border-radius: 145px;
+        background-size: cover;
+    }
+
+    .card__image {
+        width: 308px;
+        height: 450px;
+    }
+}
+
+@media (max-width: 474px) {
+    .container {
+        width: 410px;
+    }
+
+    .hero__title {
+        font-size: 48px;
+        line-height: 48px;
+    }
+
+    .hero__player {
+        width: 360px;
+        height: 360px;
+        border-radius: 180px;
+    }
+
+    .player__preview {
+        width: 300px;
+        height: 300px;
+        border-radius: 150px;
+    }
+
+    .card__image {
+        width: 410px;
+    }
 }
