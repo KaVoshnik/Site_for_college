@@ -1,10 +1,11 @@
 @font-face {
-    font-family:'Inter' ;
-    src: url(../fonts/Inter-VariableFont_opsz\,wght.ttf);
+    font-family: 'Inter';
+    src: url(../fonts/Inter.ttf) format('truetype-variations');
 }
+
 @font-face {
-    font-family:'Outfit';
-    src: url(../fonts/Outfit-VariableFont_wght.ttf);
+    font-family: 'Outfit';
+    src: url(../fonts/Outfit.ttf) format('truetype-variations');
 }
 
 body {
@@ -22,7 +23,7 @@ body {
 
 .header {
     padding: 36px 0;
-    border-bottom: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e8ec;
 }
 
 .header__container {
@@ -45,15 +46,13 @@ body {
 
 .header__logo {
     font-weight: 600;
-    text-decoration: none;
-    font-family: 'Inter';
-    font-weight: 600;
     font-size: 24px;
     line-height: 32px;
-    color: #23262f
+    color: #23262f;
+    text-decoration: none;
 }
 
-.header__verticall-line {
+.header__vertical-line {
     width: 1px;
     height: 48px;
     background-color: #e6e8ec;
@@ -66,7 +65,6 @@ body {
 }
 
 .nav__link {
-    font-family: 'Inter';
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
@@ -75,17 +73,18 @@ body {
 }
 
 .nav__link:hover {
-    color:#23262f;
+    color: #23262f;
 }
 
-.btn__ghost {
+.btn__goust {
     padding: 12px 16px;
-    background: none;
-    border: 2px solid #e6e8ec;
     border-radius: 999px;
-    font-family: 'Inter' ;
+    border: 2px solid #e6e8ec;
+    background: none;
     font-weight: 700;
+    font-size: 14px;
     line-height: 16px;
+    color: #23262f;
     cursor: pointer;
 }
 
@@ -112,6 +111,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 36px;
 }
 
 .hero__content {
@@ -128,7 +128,7 @@ body {
     gap: 24px;
 }
 
-.social__link {
+.social-link {
     display: block;
     width: 24px;
     height: 24px;
@@ -136,32 +136,33 @@ body {
     background-repeat: no-repeat;
 }
 
-.social__link_inst {
+.social-link-inst {
     background-image: url(../img/instagram.svg);
 }
 
-.social__link_twit {
+.social-link-twit {
     background-image: url(../img/twitter.svg);
 }
 
-.social__link_drib {
+.social-link-drip {
     background-image: url(../img/dribbble.svg);
 }
 
 .hero__title {
     font-family: 'Outfit';
-    font-weight: 700px;
+    font-weight: 700;
     font-size: 96px;
     line-height: 96px;
     letter-spacing: -2%;
-    color: #777e90;
+    color: #23262f;
     margin: 0;
 }
 
 .hero__subtitle {
     font-size: 24px;
-    letter-spacing: -2%;
-    color: #777e90
+    line-height: 32px;
+    letter-spacing: -1%;
+    color: #777e90;
 }
 
 .hero__player {
@@ -170,7 +171,8 @@ body {
     justify-content: center;
     width: 600px;
     height: 600px;
-    border-radius: 300;
+    border-radius: 300px;
+    border: 1px solid #e6e8ec;
     background: none;
 }
 
@@ -190,22 +192,20 @@ body {
     background-color: #e6e8ec;
     border: none;
     border-radius: 40px;
-    background: url(../img/play.svg) center center no-repeat;
+    background-image: url(../img/play.svg);
     background-position: center;
     background-repeat: no-repeat;
-    cursor: pointer;
 }
 
 /* gallery */
 
 .gallery {
     padding: 90px 0 58px 0;
-    border-bottom: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e8ec;
 }
 
-.container__gallery {
+.gallery__container {
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
     gap: 48px;
@@ -230,14 +230,14 @@ body {
     cursor: pointer;
 }
 
-.gallery__btn_activate {
+.gallery__btn_active {
     background-color: #23262f;
-    color:#e6e8ec;
+    color: #e6e8ec;
 }
 
 .gallery__btn:hover {
     outline: 1px solid #777e90;
-    outline-offset: 1px;
+    outline-offset: -1px;
 }
 
 .gallery__cards {
@@ -247,7 +247,7 @@ body {
     justify-content: space-between;
 }
 
-.card__image {
+.card__img {
     width: 379px;
     height: 450px;
     border-radius: 8px;
@@ -255,11 +255,17 @@ body {
     margin-bottom: 24px;
 }
 
-.card_name {
+.card__name {
     font-weight: 600;
     font-size: 14px;
     line-height: 24px;
-    color:#23262f;
+    color: #23262f;
+}
+
+.card__date {
+    font-size: 14px;
+    line-height: 24px;
+    color: #777e90;
 }
 
 .card__content {
@@ -268,16 +274,14 @@ body {
     justify-content: space-between;
 }
 
-.card__date {
-    font-style: 14px;
-    line-height: 24px;
-    color: #777e90;
+.gallery__card {
+    margin-bottom: 32px;
 }
 
 /* footer */
 
 .footer {
-    padding: 50px;
+    padding: 50px 0;
 }
 
 .footer__container {
@@ -294,21 +298,19 @@ body {
 }
 
 .footer__copy {
-    font-style: 14px;
+    font-size: 14px;
     line-height: 24px;
-    color:#23262f
+    color: #777e90;
 }
 
-.nav__link:hover {
-    color: #23262f;
-}
+/* tablet */
 
 @media (max-width: 768px) {
     .container {
         width: 648px;
     }
 
-    .header__verticall-line {
+    .header__vertical-line {
         display: none;
     }
 
@@ -316,27 +318,25 @@ body {
         display: none;
     }
 
-    .header__right {
-        display: none;
-    }
-
     .btn__fill {
         display: none;
     }
 
-    .btn__ghost {
+    .btn__goust {
         display: none;
     }
 
     .header__icon-menu {
         width: 44px;
         height: 44px;
-        background-image: url(../img/Menu.png);
+        background-image: url(../img/menu.svg);
+        background-position: center;
+        background-repeat: no-repeat;
     }
 
     .hero__title {
         font-size: 64px;
-        line-height: 64px;  
+        line-height: 64px;
     }
 
     .hero__subtitle {
@@ -354,7 +354,7 @@ body {
     }
 
     .hero__player {
-        width: 350px;
+        width: 100%;
         height: 350px;
     }
 
@@ -365,11 +365,13 @@ body {
         background-size: cover;
     }
 
-    .card__image {
+    .card__img {
         width: 308px;
         height: 450px;
     }
 }
+
+/* mobile */
 
 @media (max-width: 474px) {
     .container {
@@ -378,7 +380,7 @@ body {
 
     .hero__title {
         font-size: 48px;
-        line-height: 48px;
+        line-height: 56px;
     }
 
     .hero__player {
@@ -393,7 +395,331 @@ body {
         border-radius: 150px;
     }
 
-    .card__image {
+    .card__img {
+        width: 410px;
+    }
+}
+
+/* page 2 */
+
+.containerp2 {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* header p2 */
+
+.headerp2 {
+    padding: 36px 0;
+    border-bottom: 1px solid #e6e8ec;
+}
+
+.header__containerp2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__leftp2 {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+.header__rightp2 {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.header__logop2 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: #23262f;
+    text-decoration: none;
+}
+
+.header__vertical-linep2 {
+    width: 1px;
+    height: 48px;
+    background-color: #e6e8ec;
+}
+
+.header__navp2 {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav__linkp2 {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #777e90;
+    text-decoration: none;
+}
+
+.nav__linkp2:hover {
+    color: #23262f;
+}
+
+.btn__goustp2 {
+    padding: 12px 16px;
+    border-radius: 999px;
+    border: 2px solid #e6e8ec;
+    background: none;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #23262f;
+    cursor: pointer;
+}
+
+.btn__fillp2 {
+    width: 44px;
+    height: 44px;
+    background-color: #23262f;
+    border: none;
+    border-radius: 22px;
+    background-image: url(../img/message.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+/* hero p2 */
+
+.herop2 {
+    padding: 50px 0;
+    border-bottom: 1px solid #e6e8ec;
+}
+
+.herop2__containerp2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.herop2__playerp2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 500px;
+    border-radius: 10px;
+    background: none;
+}
+
+.playerp2__preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 500px;
+    border-radius: 10px;
+    background-image: url(../img/player.jpg);
+}
+
+.playerp2__btn {
+    width: 80px;
+    height: 80px;
+    background-color: #e6e8ec;
+    opacity: 0.8;
+    border: none;
+    border-radius: 40px;
+    background-image: url(../img/play.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.herop2__content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 24px;
+    width: 764px;
+}
+
+.herop2__title {
+    font-family: 'Outfit';
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 96px;
+    letter-spacing: -2%;
+    color: #23262f;
+    margin: 0;
+}
+
+.herop2__subtitle {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -1%;
+    color: #777e90;
+}
+
+.hero__date {
+    font-size: 14px;
+    line-height: 24px;
+    color: #23262f;
+}
+
+/* gallery p2 */
+
+.galleryp2 {
+    padding: 90px 0 58px 0;
+    border-bottom: 1px solid #e6e8ec;
+}
+
+.galleryp2__containerp2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+}
+
+.galleryp2__cards {
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cardp2__img {
+    width: 379px;
+    height: 450px;
+    border-radius: 8px;
+    background-size: cover;
+    margin-bottom: 24px;
+}
+
+.cardp2__name {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    color: #23262f;
+}
+
+.carp2__date {
+    font-size: 14px;
+    line-height: 24px;
+    color: #777e90;
+}
+
+.cardp2__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.galleryp2__card {
+    margin-bottom: 32px;
+}
+
+/* footer p2 */
+
+.footerp2 {
+    padding: 50px 0;
+}
+
+.footerp2__containerp2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.footerp2__nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.footerp2__copy {
+    font-size: 14px;
+    line-height: 24px;
+    color: #777e90;
+}
+
+/* tablet */
+
+@media (max-width: 768px) {
+    .containerp2 {
+        width: 648px;
+    }
+
+    .header__vertical-linep2 {
+        display: none;
+    }
+
+    .header__navp2 {
+        display: none;
+    }
+
+    .btn__fillp2 {
+        display: none;
+    }
+
+    .btn__goustp2 {
+        display: none;
+    }
+
+    .header__icon-menup2 {
+        width: 44px;
+        height: 44px;
+        background-image: url(../img/menu.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .herop2__containerp2 {
+        flex-direction: column;
+        gap: 48px;
+    }
+
+    .herop2__content {
+        width: 100%;
+    }
+
+    .herop2__playerp2 {
+        width: 100%;
+        height: 498px;
+    }
+
+    .playerp2__preview {
+        width: 100%;
+        height: 498px;
+        border-radius: 10px;
+        background-size: cover;
+    }
+
+    .cardp2__img {
+        width: 308px;
+        height: 450px;
+    }
+}
+
+/* mobile */
+
+@media (max-width: 474px) {
+    .containerp2 {
+        width: 410px;
+    }
+
+    .herop2__playerp2 {
+        width: 100%;
+        height: 500px;
+        border-radius: 10px;
+    }
+
+    .playerp2__preview {
+        width: 100%;
+        height: 500px;
+        border-radius: 10px;
+    }
+
+    .cardp2__img {
         width: 410px;
     }
 }
